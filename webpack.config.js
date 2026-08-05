@@ -29,6 +29,10 @@ export default {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+            },
         ],
     },
 
@@ -38,47 +42,6 @@ export default {
         port: 8080,
     },
 };
-
-
-
-
-
-
-// import path from 'path';
-// import HtmlWebpackPlugin from 'html-webpack-plugin';
-
-// module.export =  {
-//     mode: 'development',
-
-//     entry: './src/index.js',
-
-//     output: {
-//         filename: "main.js",
-//         path: path.resolve(__dirname, "dist"),
-//         clean: true,
-//     },
-
-//     plugins: [
-//         new HtmlWebpackPlugin({
-//             template: "./src/template.html",
-//         }),
-//     ],
-
-//     module: {
-//         rules: [
-//             {
-//                 test: /\.css$/,
-//                 use: ["style-loader", "css-loader"],
-//             },
-//         ],
-//     },
-
-//     devServer: {
-//         static: "./dist",
-//         open: true,
-//         port: 8080,
-//     },
-// };
 
 
 
