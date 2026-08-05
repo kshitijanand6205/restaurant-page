@@ -1,3 +1,6 @@
+import '../style/menu.css';
+import menuItems from '../data/menuData.js';
+
 function createMenuCard(name, description, price) {
     const card = document.createElement('div');
     card.classList.add('menu-card');
@@ -16,7 +19,7 @@ function createMenuCard(name, description, price) {
     card.appendChild(cost);
 
     return card;
-};
+}; 
 
 function loadMenu() {
     const content = document.querySelector('#content');
@@ -27,28 +30,16 @@ function loadMenu() {
     const heading = document.createElement('h1');
     heading.textContent = 'Our Menu';
 
-    const pizzaCard = createMenuCard(
-        'Margherita Pizza',
-        'Fresh mozzarella, basil and tomato sauce.',
-        '$5'
-    );
-
-    const burgerCard = createMenuCard(
-        'Cheese Burger',
-        'Juicy grilled beef with cheddar cheese.',
-        '$4'
-    );
-
-    const pastaCard = createMenuCard(
-        'Alfredo Pasta',
-        'Creamy white sauce pasta',
-        '$3'
-    );
-
     menu.appendChild(heading);
-    menu.appendChild(pizzaCard);
-    menu.appendChild(burgerCard);
-    menu.appendChild(pastaCard);
+   
+    menuItems.forEach((item) => {
+        const card = createMenuCard(
+            item.name,
+            item.description,
+            item.price
+        );
+        menu.appendChild(card);
+    });
 
     content.appendChild(menu);
 };
