@@ -21,8 +21,8 @@ function loadHome() {
     const description = document.createElement('p');
     description.textContent = 
     `Experience handcrafted pizzas,
-     juicy burgers and refreshing drinks made from
-    the freshest ingredients every single day.`;
+        juicy burgers and refreshing drinks made from
+        the freshest ingredients every single day.`;
 
     const image = document.createElement('img');
     image.src = restaurantImage;
