@@ -1,42 +1,127 @@
+/* ================================================= */
+/* CONTACT PAGE */
+/* ================================================= */
+
 .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding: 60px 40px;
+    min-height: calc(100vh - 90px);
 }
 
 .contact h1 {
-    font-size: 48px;
-    margin-bottom: 40px;
+    font-size: 3rem;
+    color: #222;
+    margin-bottom: 50px;
     text-align: center;
 }
 
+/* ================================================= */
+/* CONTACT CARD */
+/* ================================================= */
+
 .contact-info {
-    width: 500px;
-    padding: 20px;
-    margin-bottom: 20px;
+    width: 100%;
+    max-width: 550px;
+
     background: white;
-    border-radius: 12px;
-    box-shadow: 0 40px 10px rgba(0,0,0,0.1);
-}
 
-.contact-info h2 {
-    margin-top: 0;
-}
+    padding: 25px;
+    margin-bottom: 25px;
 
-.contact-info p {
-    color: darkolivegreen;
-    line-height: 1.6;
-}
+    border-radius: 16px;
 
-.contact-info {
-    color: darkgreen;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: all .3s ease;
+
+    cursor: pointer;
 }
 
 .contact-info:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,.18);
 }
 
-.contact-info {
-    transition: 0.3s;
+.contact-info h2 {
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.contact-info p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* ================================================= */
+/* TABLET */
+/* ================================================= */
+
+@media (max-width: 992px) {
+
+    .contact {
+        padding: 50px 30px;
+    }
+
+    .contact h1 {
+        font-size: 2.6rem;
+    }
+
+    .contact-info {
+        max-width: 500px;
+    }
+
+}
+
+/* ================================================= */
+/* MOBILE */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .contact h1 {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-info p {
+        font-size: .95rem;
+    }
+
+}
+
+/* ================================================= */
+/* SMALL PHONES */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+    .contact {
+        padding: 30px 15px;
+    }
+
+    .contact h1 {
+        font-size: 1.9rem;
+    }
+
+    .contact-info {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
 }
